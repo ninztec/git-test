@@ -1,0 +1,40 @@
+replicaCount: 2
+
+image:
+  repository: rjshk013/node-hellow
+  pullPolicy: IfNotPresent
+  tag: latest
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: NodePort
+  port: 80
+ingress:
+  enabled: false 
+resources: {}
+limits:
+    cpu: 100m
+    memory: 256Mii
+requests:
+    cpu: 100m
+    memory: 256Mi
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
